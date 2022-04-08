@@ -1,0 +1,24 @@
+<?php
+
+use EVGV\GuestBook\Block\Message\Index;
+
+/** @var $block Index */
+
+?>
+
+<div class="list">
+    <?php $messages = $block->getMessages() ?>
+    <?php if (!count($messages)): ?>
+        <p><?= __('There is no messages yet.') ?></p>
+    <?php else: ?>
+        <ul>
+            <?php /** @var $message \EVGV\GuestBook\Api\Data\MessageInterface */ ?>
+            <?php foreach ($messages as $message): ?>
+                <li>
+                    <span><?= $block->getMessageInfo($message) ?></span>
+                    <p><?= $message->getMessage() ?></p>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
+</div>

@@ -1,0 +1,22 @@
+{
+    "name": "evgv/module-guestbook",
+    "description": "Guest Book M2 Extension",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Eugene Zubkov",
+            "email": "evgvzubkoff@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "EVGV\\GuestBook\\": ""
+        }
+    }
+}
